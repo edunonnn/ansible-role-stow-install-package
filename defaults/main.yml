@@ -1,0 +1,8 @@
+---
+# defaults file for stow_install_package
+
+# Stow will install stow_install_package in system
+stow_install_package: ''
+
+# The directory packages archive
+stow_dir: /usr/local/stow

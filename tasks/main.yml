@@ -1,0 +1,11 @@
+---
+# tasks file for stow_install_package
+- name: Prerequisites
+  package: name=xstow
+
+- name: Installing package
+  command: xstow '{{ stow_install_package }}'
+  args:
+    chdir: '{{ stow_dir }}'
+    creates: '{{ stow_dir }}/../bin/{{ stow_install_package }}'
+  when: stow_install_package != ''
